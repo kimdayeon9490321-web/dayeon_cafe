@@ -1,3 +1,7 @@
+![바닐라 크림 라떼](https://raw.githubusercontent.com/kimdayeon9490321-web/dayeon_cafe/main/assets/vanilla-cream-latte.png)
+
+# Signature: 바닐라 크림 라떼
+
 # 카페 랜딩페이지 제작(원페이지)
 
 ## 요약
