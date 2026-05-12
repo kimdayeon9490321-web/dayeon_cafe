@@ -20,10 +20,9 @@
 - [ ] 지도 링크(네이버/카카오/구글) 연결 + 필요 시 iframe 임베드
 
 ## 링크(추가 예정)
-- 배포 URL: (예: GitHub Pages/Netlify/Vercel)
-- 소스 저장소: (repo URL)
+- 배포 URL(예시): `https://kimdayeon9490321-web.github.io/cafe-landingpage/`
+- 소스 저장소(예시): `https://github.com/kimdayeon9490321-web/cafe-landingpage`
 
 ## 사용 방법(간단)
 - `index.html`을 브라우저로 열면 동작
 - 내용 변경은 `script.js`의 `PRESETS`만 수정하면 전체에 반영
-
