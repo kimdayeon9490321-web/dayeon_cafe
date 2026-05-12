@@ -5,6 +5,8 @@ const PRESETS = {
   local: {
     presetKey: "local",
     brandName: "카페 하루",
+    heroImageSrc: "./assets/vanilla-cream-latte.png",
+    heroImageAlt: "바닐라 크림 라떼",
     notice: "오늘의 추천: 시그니처 라떼 · 디저트 소진 시 조기 마감",
     heroTitle: "오늘, 동네에서 가장 편한 한 잔",
     heroSubtitle: "아침 8시 오픈 · 빠른 테이크아웃 · 편하게 앉아 쉬어도 좋아요.",
@@ -69,6 +71,8 @@ const PRESETS = {
   signature: {
     presetKey: "signature",
     brandName: "카페 루미",
+    heroImageSrc: "./assets/vanilla-cream-latte.png",
+    heroImageAlt: "바닐라 크림 라떼",
     notice: "오늘만: 시즌 한정 딸기 크림 케이크 · 한정 수량",
     heroTitle: "매일 구워 나오는 시그니처 디저트",
     heroSubtitle: "재료·당도·온도까지 디테일하게. 커피는 디저트와 어울리게 블렌딩했어요.",
@@ -133,6 +137,8 @@ const PRESETS = {
   work: {
     presetKey: "work",
     brandName: "카페 포커스",
+    heroImageSrc: "./assets/vanilla-cream-latte.png",
+    heroImageAlt: "바닐라 크림 라떼",
     notice: "조용한 시간대: 평일 10–12시 · 단체 이용은 문의",
     heroTitle: "콘센트 많은 조용한 작업 카페",
     heroSubtitle: "와이파이 · 넓은 테이블 · 오래 앉아도 편한 의자. 몰입이 되는 환경을 만들었어요.",
@@ -268,6 +274,12 @@ function applyPreset(key) {
   const p = PRESETS[key] ?? PRESETS.local;
 
   document.documentElement.setAttribute("data-preset", p.presetKey);
+
+  const heroImage = $('[data-ui="heroImage"]');
+  if (heroImage) {
+    heroImage.setAttribute("src", p.heroImageSrc);
+    heroImage.setAttribute("alt", p.heroImageAlt);
+  }
 
   setText("brandName", p.brandName);
   setText("brandNameFooter", p.brandName);
