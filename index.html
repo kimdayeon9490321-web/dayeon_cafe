@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="카페 랜딩페이지 템플릿(동네 단골형/시그니처·디저트형/작업·공간형) — 메뉴, 소개, 위치, 운영정보, 문의를 한 페이지에."
+    />
+    <title>카페 랜딩페이지</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="카페 랜딩페이지" />
+    <meta
+      property="og:description"
+      content="10초 안에 ‘어디/뭐가 좋음/뭘 하면 됨’을 전달하는 카페 원페이지 템플릿."
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">본문으로</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="홈으로">
+          <span class="brand-mark" aria-hidden="true">☕</span>
+          <span class="brand-name" data-bind="brandName">카페 하루</span>
+        </a>
+
+        <nav class="nav" aria-label="주요 메뉴">
+          <a class="nav-link" href="#menu">메뉴</a>
+          <a class="nav-link" href="#space">공간</a>
+          <a class="nav-link" href="#about">소개</a>
+          <a class="nav-link" href="#location">위치</a>
+          <a class="nav-link" href="#contact">문의</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" type="button" data-action="themeToggle" aria-label="테마 전환">
+            <span aria-hidden="true">◐</span>
+          </button>
+          <a class="btn btn-primary" data-bind="headerCta" href="#location">길찾기</a>
+          <button
+            class="icon-btn nav-toggle"
+            type="button"
+            data-action="navToggle"
+            aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span aria-hidden="true">≡</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container nav-mobile" id="mobileNav" data-ui="mobileNav" hidden>
+        <a class="nav-link" href="#menu">메뉴</a>
+        <a class="nav-link" href="#space">공간</a>
+        <a class="nav-link" href="#about">소개</a>
+        <a class="nav-link" href="#location">위치</a>
+        <a class="nav-link" href="#contact">문의</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="pill" role="note">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-bind="notice">오늘의 추천: 시그니처 라떼 · 디저트 소진 시 조기 마감</span>
+            </div>
+            <h1 class="hero-title" data-bind="heroTitle">오늘, 동네에서 가장 편한 한 잔</h1>
+            <p class="hero-subtitle" data-bind="heroSubtitle">
+              아침 8시 오픈 · 빠른 테이크아웃 · 편하게 앉아 쉬어도 좋아요.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" data-bind="primaryCta" href="#location">길찾기</a>
+              <a class="btn btn-ghost btn-lg" data-bind="secondaryCta" href="#menu">메뉴 보기</a>
+            </div>
+
+            <ul class="hero-badges" aria-label="카페 특징">
+              <li class="badge" data-bind="badge1">원두 2종</li>
+              <li class="badge" data-bind="badge2">반려동물 동반</li>
+              <li class="badge" data-bind="badge3">테이크아웃 빠름</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card">
+              <div class="hero-photo"></div>
+              <div class="hero-card-row">
+                <div class="hero-card-title" data-bind="visualTitle">Signature</div>
+                <div class="hero-card-chip" data-bind="visualChip">Best</div>
+              </div>
+              <div class="hero-card-sub" data-bind="visualSub">바닐라 크림 라떼 · 라이트 로스팅</div>
+            </div>
+            <div class="hero-float hero-float-a"></div>
+            <div class="hero-float hero-float-b"></div>
+          </div>
+        </div>
+
+        <div class="container concept">
+          <div class="concept-card">
+            <div class="concept-left">
+              <div class="concept-title">컨셉 3가지</div>
+              <div class="concept-desc">버튼을 눌러 카피/메뉴/강점을 즉시 바꿔볼 수 있어요.</div>
+            </div>
+            <div class="segmented" role="tablist" aria-label="랜딩페이지 컨셉 선택">
+              <button class="seg" type="button" role="tab" aria-selected="true" data-action="preset" data-preset="local">
+                동네 단골형
+              </button>
+              <button class="seg" type="button" role="tab" aria-selected="false" data-action="preset" data-preset="signature">
+                디저트·시그니처형
+              </button>
+              <button class="seg" type="button" role="tab" aria-selected="false" data-action="preset" data-preset="work">
+                작업·공간형
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="menu">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">대표 메뉴</h2>
+            <p class="section-sub" data-bind="menuLead">처음 오시면 여기부터 추천해요.</p>
+          </div>
+
+          <div class="cards" data-bind="menuCards" aria-label="대표 메뉴 목록"></div>
+
+          <div class="callout">
+            <div class="callout-text">
+              <div class="callout-title" data-bind="calloutTitle">단골이 되는 가장 쉬운 방법</div>
+              <div class="callout-sub" data-bind="calloutSub">방문 전, 혼잡 시간/주차 정보를 확인하세요.</div>
+            </div>
+            <a class="btn btn-ghost" data-bind="calloutCta" href="#location">운영정보 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="space">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">공간 · 서비스</h2>
+            <p class="section-sub" data-bind="spaceLead">편안함(또는 몰입)을 만드는 디테일을 소개해요.</p>
+          </div>
+
+          <div class="features" data-bind="featureCards" aria-label="공간/서비스 특징 목록"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <div class="kicker" data-bind="aboutKicker">ABOUT</div>
+            <h2 class="section-title" data-bind="aboutTitle">가볍게 들르기 좋은, 작은 쉼</h2>
+            <p class="section-sub" data-bind="aboutBody">
+              계절에 따라 원두를 바꿔요. 산미가 부담스럽지 않도록 밸런스를 맞추고, 디저트는 매일 소량으로 구워 신선함을
+              지켜요.
+            </p>
+
+            <ul class="checks" aria-label="가게 안내">
+              <li data-bind="aboutCheck1">좌석 24석 · 단체석 1</li>
+              <li data-bind="aboutCheck2">테이크아웃 포장 빠름</li>
+              <li data-bind="aboutCheck3">원두 구매 가능</li>
+            </ul>
+
+            <div class="about-actions">
+              <a class="btn btn-primary" data-bind="aboutCta" href="#contact">문의하기</a>
+              <a class="btn btn-ghost" data-bind="aboutCta2" href="#menu">메뉴 보기</a>
+            </div>
+          </div>
+
+          <div class="about-visual" aria-hidden="true">
+            <div class="gridshot gridshot-a"></div>
+            <div class="gridshot gridshot-b"></div>
+            <div class="gridshot gridshot-c"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="location">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">위치 · 운영정보</h2>
+            <p class="section-sub">방문 전에 확인하면 더 편해요.</p>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-title">주소</div>
+              <div class="info-value" data-bind="address">서울시 ○○구 ○○로 00, 1층</div>
+              <div class="info-meta" data-bind="transit">지하철 ○○역 2번 출구 도보 6분</div>
+              <div class="info-actions">
+                <a class="btn btn-primary" data-bind="mapCta" href="#" target="_blank" rel="noreferrer">지도 열기</a>
+                <a class="btn btn-ghost" href="#contact">전화/문의</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-title">운영시간</div>
+              <div class="hours" data-bind="hours">
+                <div class="hours-row">
+                  <div>월–금</div>
+                  <div>08:00–20:00</div>
+                </div>
+                <div class="hours-row">
+                  <div>토–일</div>
+                  <div>10:00–21:00</div>
+                </div>
+                <div class="hours-row muted">
+                  <div>브레이크</div>
+                  <div>없음</div>
+                </div>
+              </div>
+              <div class="chips">
+                <span class="chip" data-bind="chip1">주차 2대</span>
+                <span class="chip" data-bind="chip2">와이파이</span>
+                <span class="chip" data-bind="chip3">콘센트</span>
+              </div>
+            </div>
+
+            <div class="info-card map">
+              <div class="map-surface" role="img" aria-label="지도 자리(임베드용)">
+                <div class="map-placeholder">
+                  <div class="map-title">지도 임베드</div>
+                  <div class="map-sub">네이버/카카오/구글 지도 iframe을 여기 넣어도 돼요.</div>
+                </div>
+              </div>
+              <div class="map-foot">
+                <span class="muted">팁: ‘길찾기’ 버튼은 지도 링크로 연결하세요.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reviews">
+            <h3 class="subhead">후기</h3>
+            <div class="review-grid" aria-label="고객 후기">
+              <article class="review">
+                <div class="review-top">
+                  <div class="stars" aria-label="별점 5점">★★★★★</div>
+                  <div class="reviewer">동네단골</div>
+                </div>
+                <p class="review-body">라떼가 진하고 디저트도 과하지 않아요. 자리도 편해서 자주 와요.</p>
+              </article>
+              <article class="review">
+                <div class="review-top">
+                  <div class="stars" aria-label="별점 5점">★★★★★</div>
+                  <div class="reviewer">주말산책</div>
+                </div>
+                <p class="review-body">분위기가 따뜻하고 직원분들도 친절해요. 포장도 깔끔합니다.</p>
+              </article>
+              <article class="review">
+                <div class="review-top">
+                  <div class="stars" aria-label="별점 5점">★★★★★</div>
+                  <div class="reviewer">작업러</div>
+                </div>
+                <p class="review-body">콘센트 많고 조용해서 집중 잘 돼요. 커피도 안정적으로 맛있어요.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-copy">
+              <h2 class="section-title">문의</h2>
+              <p class="section-sub" data-bind="contactLead">
+                단체 예약, 홀케이크/픽업, 촬영 문의는 아래로 연락 주세요.
+              </p>
+              <div class="contact-rows">
+                <div class="contact-row">
+                  <div class="contact-k">전화</div>
+                  <a class="contact-v" data-bind="phoneLink" href="tel:010-0000-0000">010-0000-0000</a>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-k">인스타</div>
+                  <a class="contact-v" data-bind="instaLink" href="#" target="_blank" rel="noreferrer">@cafe_haru</a>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-k">이메일</div>
+                  <a class="contact-v" data-bind="emailLink" href="mailto:hello@cafe.com">hello@cafe.com</a>
+                </div>
+              </div>
+            </div>
+            <form class="form" aria-label="간단 문의 폼" data-ui="contactForm">
+              <label class="field">
+                <span class="label">이름</span>
+                <input name="name" type="text" autocomplete="name" placeholder="홍길동" required />
+              </label>
+              <label class="field">
+                <span class="label">연락처(선택)</span>
+                <input name="contact" type="text" autocomplete="tel" placeholder="010-0000-0000" />
+              </label>
+              <label class="field">
+                <span class="label">내용</span>
+                <textarea name="message" rows="5" placeholder="문의 내용을 적어주세요." required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">보내기(데모)</button>
+              <p class="form-note muted">
+                이 폼은 데모예요. 실제 전송은 `script.js`에서 연동(Email/Notion/Google Forms 등)하세요.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">☕</span>
+            <span data-bind="brandNameFooter">카페 하루</span>
+          </div>
+          <div class="footer-muted" data-bind="footerLine1">서울시 ○○구 ○○로 00</div>
+          <div class="footer-muted" data-bind="footerLine2">사업자등록번호 000-00-00000 · 대표 홍길동</div>
+        </div>
+
+        <div class="footer-links" aria-label="바로가기">
+          <a href="#menu">메뉴</a>
+          <a href="#about">소개</a>
+          <a href="#location">위치</a>
+          <a href="#contact">문의</a>
+        </div>
+
+        <div class="footer-actions">
+          <a class="btn btn-ghost" data-bind="footerCta" href="#location">길찾기</a>
+          <button class="btn btn-ghost" type="button" data-action="scrollTop">맨 위로</button>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span class="footer-muted">© <span data-bind="year">2026</span> <span data-bind="brandNameSmall">카페 하루</span>. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>
